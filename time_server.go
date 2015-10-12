@@ -7,8 +7,11 @@ import (
 )
 
 func main() {
+	// Registrering the service
 	http.HandleFunc(
-		"/tempo",
+		// Setting the url
+		"/time",
+		// Anonymous function
 		func(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "%s", time.Now().Format("2006-01-02 15:04:05"))
 		})
